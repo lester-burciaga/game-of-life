@@ -1,14 +1,22 @@
-# game-of-life
+# ReactJs Game Of Live 
+[Live Demo](https://lester-burciaga.github.io/game-of-life/)
+
 Conway's Game of Life using ReactJs
 
-## Installation of packages and dependencies
+## Installation of packages and dependencies 
 
 On the root project folder run:
 
 ```bash
 npm install
 ```
-# Run tests
+## Run app
+
+```bash
+npm start
+```
+
+## Run tests
 
 ```bash
 npm test

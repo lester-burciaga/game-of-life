@@ -94,6 +94,7 @@ const Board = () => {
         Clear
       </button>
       <div
+        data-testid='boardGame'
         style={{
           display: 'grid',
           justifyContent: 'center',

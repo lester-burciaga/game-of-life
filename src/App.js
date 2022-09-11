@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <h1 className='title'>ReactJs Game Of Life</h1>
+      <h1 className='title'>&#128126; ReactJs Game Of Life &#128126;</h1>
       <Board />
     </div>
   );

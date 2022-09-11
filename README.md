@@ -10,7 +10,13 @@ On the root project folder run:
 ```bash
 npm install
 ```
-# Run tests
+## Run app
+
+```bash
+npm start
+```
+
+## Run tests
 
 ```bash
 npm test

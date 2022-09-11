@@ -1,34 +1,57 @@
 import { useState } from 'react';
+import produce from 'immer';
 
-const NUM_ROWS = 40;
-const NUM_COLS = 40;
+const MATRIX = [
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+];
 
 const generateEmptyGrid = () => {
   const rows = [];
-  for (let i = 0; i < NUM_ROWS; i++) {
-    rows.push(Array.from(Array(NUM_COLS), () => 0));
-  }
+  MATRIX.forEach((row) => {
+    rows.push(Array.from(Array(MATRIX.length), () => 0));
+  });
+
   return rows;
-  
 };
 
 const Board = () => {
   const [grid, setGrid] = useState(() => {
     return generateEmptyGrid();
   });
+
+  const handleClick = (x, y) => {
+    const newGrid = produce(grid, (gridCopy) => {
+      gridCopy[x][y] = grid[x][y] ? 0 : 1;
+    });
+    setGrid(newGrid);
+  };
+
+  const randomGrid = () => {
+    const rows = [];
+    MATRIX.forEach((row) => {
+      rows.push(
+        Array.from(Array(MATRIX.length), () => (Math.random() > 0.6 ? 1 : 0))
+      );
+    });
+    setGrid(rows);
+  };
+
   return (
-    <div>
+    <>
+      <button onClick={() => randomGrid()}>Random</button>
       <div
         style={{
           display: 'grid',
           justifyContent: 'center',
-          gridTemplateColumns: `repeat(${NUM_COLS}, 20px`,
+          gridTemplateColumns: `repeat(${MATRIX.length}, 20px`,
         }}
       >
         {grid.map((rows, i) =>
           rows.map((col, k) => (
             <div
               key={`${i}/${k}`}
+              onClick={() => handleClick(i, k)}
               style={{
                 width: 20,
                 height: 20,
@@ -39,7 +62,7 @@ const Board = () => {
           ))
         )}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-# game-of-life
+# ReactJs Game Of Live [Live Demo](https://lester-burciaga.github.io/game-of-life/)
 Conway's Game of Life using ReactJs
 
 ## Installation of packages and dependencies

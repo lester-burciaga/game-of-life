@@ -1,8 +1,9 @@
-# ReactJs Game Of Live ##[Live Demo](https://lester-burciaga.github.io/game-of-life/){:target="_blank" rel="noopener"}
+# ReactJs Game Of Live
+##[Live Demo](https://lester-burciaga.github.io/game-of-life/)
 
 Conway's Game of Life using ReactJs
 
-## Installation of packages and dependencies
+## Installation of packages and dependencies 
 
 On the root project folder run:
 

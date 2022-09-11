@@ -1,3 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
 .App {
   text-align: center;
+}
+
+.title {
+  font-family: 'Bungee Shade';
+  font-size: 42px;
+  margin: 0;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 6px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn__play {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+}
+
+.btn__play:hover {
+  background-color: #3e8e41;
+}
+
+.btn__stop {
+  background-color: #f20d0d;
+  border: none;
+  color: white;
+}
+
+.btn__stop:hover {
+  background-color: #cc3333;
+}
+
+.btn__random {
+  background-color: #8006f9;
+  border: none;
+  color: white;
+}
+
+.btn__random:hover {
+  background-color: #802dd2;
+}
+
+.btn__clear {
+  background-color: #4d4d4d;
+  border: none;
+  color: white;
+}
+
+.btn__clear:hover {
+  background-color: #1a1a1a;
 }

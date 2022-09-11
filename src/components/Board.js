@@ -82,11 +82,17 @@ const Board = () => {
 
   return (
     <>
-      <button onClick={() => handleRunClick()}>
+      <button
+        className={`btn ${!running ? 'btn__play' : 'btn__stop'}`}
+        onClick={() => handleRunClick()}
+      >
         {running ? 'Stop' : 'Start'}
       </button>
-      <button onClick={() => randomGrid()}>Random</button>
+      <button className='btn btn__random' onClick={() => randomGrid()}>
+        Random
+      </button>
       <button
+        className='btn btn__clear'
         onClick={() => {
           setGrid(generateEmptyGrid());
         }}
@@ -99,6 +105,7 @@ const Board = () => {
           display: 'grid',
           justifyContent: 'center',
           gridTemplateColumns: `repeat(${MATRIX.length}, 20px`,
+          marginTop: '1rem',
         }}
       >
         {grid.map((rows, i) =>
